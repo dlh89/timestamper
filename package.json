@@ -1,8 +1,8 @@
 {
 	"name": "timestamper",
 	"displayName": "Timestamper",
-	"description": "Insert a current unix timestamp",
-	"version": "0.0.1",
+	"description": "Insert a current Unix timestamp",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.33.0"
 	},
