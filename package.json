@@ -3,6 +3,11 @@
 	"displayName": "Timestamper",
 	"description": "Insert a current Unix timestamp",
 	"version": "1.0.0",
+	"publisher": "dhide",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dlh89/timestamper"
+	},
 	"engines": {
 		"vscode": "^1.33.0"
 	},
