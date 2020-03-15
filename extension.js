@@ -16,7 +16,7 @@ function activate(context) {
 		}
 
 		const selection = editor.selection;
-		const timestamp = Date.now();
+		const timestamp = Math.round((new Date()).getTime() / 1000); // JS uses milliseconds, whereas Unix Time is in seconds
 
 		editor.edit(editBuilder => {
 			editBuilder.insert(
