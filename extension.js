@@ -19,6 +19,7 @@ function activate(context) {
 		const timestamp = Math.round((new Date()).getTime() / 1000); // JS uses milliseconds, whereas Unix Time is in seconds
 
 		editor.edit(editBuilder => {
+			editBuilder.delete(selection);
 			editBuilder.insert(
 				new vscode.Position(selection.active.line, selection.active.character),
 				`${timestamp}`
