@@ -10,14 +10,6 @@ Note that this extension is for generating a static timestamp at the time of run
 
 ![Insert timestamp](images/timestamper.gif "Insert a Unix timestamp with a hotkey or from the command palette")
 
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
 Initial release of Timestamper
