@@ -2,7 +2,7 @@
 	"name": "timestamper",
 	"displayName": "Timestamper",
 	"description": "Insert a current Unix timestamp",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"publisher": "dhide",
 	"repository": {
 		"type": "git",
