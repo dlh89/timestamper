@@ -15,7 +15,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.insertTimestamp"
+		"onCommand:extension.insertTimestamp",
+		"onCommand:extension.insertTimestampMS"
 	],
 	"main": "./extension.js",
 	"contributes": {
@@ -25,8 +26,8 @@
 				"title": "Insert timestamp"
 			},
 			{
-				"command": "extension.insertTimestampMs",
-				"title": "Insert timestamp (Milliseconds)"
+				"command": "extension.insertTimestampMS",
+				"title": "Insert timestamp (milliseconds)"
 			}
 		],
 		"keybindings": [

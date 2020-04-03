@@ -29,7 +29,7 @@ function activate(context) {
 		const timestamp = Math.round(Date.now() / 1000);
 		doReplace(editor, timestamp)
 	});
-	const insertTimestampMs = vscode.commands.registerCommand("extension.insertTimestampMs", () => {
+	const insertTimestampMS = vscode.commands.registerCommand("extension.insertTimestampMS", () => {
 		const editor = vscode.window.activeTextEditor;
 		if (!editor) {
 	 		 return;
@@ -40,7 +40,7 @@ function activate(context) {
 	});
 
 	context.subscriptions.push(insertTimestamp);
-	context.subscriptions.push(insertTimestampMs);
+	context.subscriptions.push(insertTimestampMS);
 }
 exports.activate = activate;
 
