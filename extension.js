@@ -2,31 +2,45 @@
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
 
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
+function doReplace(editor, string)
+{
+	const selection = editor.selection;
+	editor.edit(editBuilder => {
+		editBuilder.replace(
+			new vscode.Range(selection.start, selection.end),
+			`${string}`
+		);
+	});
+}
 
 /**
+ * this method is called when your extension is activated
+ * your extension is activated the very first time the command is executed
+ *
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
 	const insertTimestamp = vscode.commands.registerCommand("extension.insertTimestamp", () => {
-    const editor = vscode.window.activeTextEditor;
-    if (!editor) {
-      return;
+		const editor = vscode.window.activeTextEditor;
+		if (!editor) {
+	 		 return;
 		}
 
-		const selection = editor.selection;
-		const timestamp = Date.now();
+		const timestamp = Math.round(Date.now() / 1000);
+		doReplace(editor, timestamp)
+	});
+	const insertTimestampMs = vscode.commands.registerCommand("extension.insertTimestampMs", () => {
+		const editor = vscode.window.activeTextEditor;
+		if (!editor) {
+	 		 return;
+		}
 
-		editor.edit(editBuilder => {
-			editBuilder.insert(
-				new vscode.Position(selection.active.line, selection.active.character),
-				`${timestamp}`
-			);
-		});
+		const timestamp = Date.now();
+		doReplace(editor, timestamp)
 	});
 
 	context.subscriptions.push(insertTimestamp);
+	context.subscriptions.push(insertTimestampMs);
 }
 exports.activate = activate;
 
